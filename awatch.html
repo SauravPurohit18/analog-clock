@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="awatch.css" />
+  </head>
+  <body>
+    <div id="circle">
+      <div id="dot"></div>
+      <div class="hour" id="hour"></div>
+      <div class="min" id="min"></div>
+      <div class="sec" id="sec"></div>
+      <div class="one" id="same">1</div>
+      <div class="two" id="same">2</div>
+      <div class="three" id="same">3</div>
+      <div class="four" id="same">4</div>
+      <div class="five" id="same">5</div>
+      <div class="six" id="same">6</div>
+      <div class="seven" id="same">7</div>
+      <div class="eight" id="same">8</div>
+      <div class="nine" id="same">9</div>
+      <div class="ten" id="same">10</div>
+      <div class="eleven" id="same">11</div>
+      <div class="twelve" id="same">12</div>
+      <div class="calc">
+        <div id="dates">
+          <p id="tt"></p>
+        </div>
+        <div id="month">
+          <p id="txt">MAR</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  week=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+  window.onload = () => clock();
+
+  function clock() {
+    date = new Date();
+    hours = date.getHours();
+    minute = date.getMinutes();
+    seconds = date.getSeconds();
+    tt.innerHTML = date.getDate();
+    weekDay= date.getDay()-1;
+    txt.innerHTML = week[weekDay] 
+    min.style.transform = "rotate(" + minute * 6 + "deg)";
+    sec.style.transform = "rotate(" + seconds * 6 + "deg)";
+    hour.style.transform = "rotate(" +( (hours * 30)+ (minute/2)) + "deg)";
+    setTimeout(clock, 1000);
+  }
+</script>
+
+
+
+1 hour 
+
+
+
+
+
